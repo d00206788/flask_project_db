@@ -7,7 +7,7 @@ from flask_sqlalchemy import SQLAlchemy
 app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:password@localhost/flask_db_98lh'
 db = SQLAlchemy(app)
 
-conn = psycopg2.connect(database="flask_db_98lh" , host = "localhost", user = "postgre", password ="8O53Qd6A633Q2AQNjFPJoxnNyf2yL9fh", port = "5432")
+conn = psycopg2.connect(database="flask_db" , host = "localhost", user = "postgre", password ="password", port = "5432")
 cur = conn.cursor()
 
 cur.execute('''CREATE TABLE IF NOT EXISTS movies (id serial PRIMARY KEY, name varchar(100), rating integer, duration integer);  ''')
@@ -43,18 +43,7 @@ def contact():
 if __name__ == '__main__':
  app.run(debug = True)
 
- class User(db.Model):
-    id = db.Column(db.Integer, primary_key=True)
-    username = db.Column(db.String(80), unique=True, nullable=False)
 
-# Create the database tables
-db.create_all()
-
-@app.route('/users', methods=['GET'])
-def get_users():
-    users = User.query.all()
-    user_list = [{'id': user.id, 'username': user.username} for user in users]
-    return jsonify({'users': user_list})
 
 
  
