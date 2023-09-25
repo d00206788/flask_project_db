@@ -7,6 +7,16 @@ from flask_sqlalchemy import SQLAlchemy
 app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:password@localhost/flask_db'
 db = SQLAlchemy(app)
 
+conn = psycopg2.connect(database="flask_db" , host = "localhost", user = "postgres", password ="password", port = "5432")
+cur = conn.cursor()
+
+cur.execute('''CREATE TABLE IF NOT EXISTS movies (id serial PRIMARY KEY, name varchar(100), rating integer, duration integer);  ''')
+cur.execute('''INSERT INTO movies (name,rating,duration) VALUES ('Tangled',10,1), ('Bee Movie',7,1); ''')
+
+conn.commit()
+cur.close()
+conn.close()
+
 app = Flask(__name__, template_folder='templates', static_folder='static')
 
 @app.route('/')
