@@ -4,10 +4,10 @@ import os
 
 app = Flask(__name__)
 from flask_sqlalchemy import SQLAlchemy
-app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:password@localhost/flask_db'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:password@localhost/flask_db_98lh'
 db = SQLAlchemy(app)
 
-conn = psycopg2.connect(database="flask_db" , host = "localhost", user = "postgres", password ="password", port = "5432")
+conn = psycopg2.connect(database="flask_db_98lh" , host = "localhost", user = "postgre", password ="8O53Qd6A633Q2AQNjFPJoxnNyf2yL9fh", port = "5432")
 cur = conn.cursor()
 
 cur.execute('''CREATE TABLE IF NOT EXISTS movies (id serial PRIMARY KEY, name varchar(100), rating integer, duration integer);  ''')
