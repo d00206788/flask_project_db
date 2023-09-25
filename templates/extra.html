@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="stylesheet" type="text/css" href="../static/css/style.css"/>
+    <script type="text/javascript" src="../static/js/script.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/c4254e24a8.js" crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1"> 
+    <meta name="description" content="Osiris is made of singer Jack Conway, Dylan Tuohy and Ciaran Leyden on guitars, Kyle Duncan on bass and Jamie Myers on drums. Street Noise out now">
+     <link rel="icon" type="image/x-icon" href="images\favicon.ico">
+    <title>Homepage: Katie Rice portfolio</title>
+    
+</head>
+
+<body>
+<header>
+  <nav>
+    <ul>
+
+  <li><a href="index.html">Home</a></li>
+  <li><a href="projects.html">Projects</a></li>
+  <li><a href="skills.html">Skills</a></li>
+  <li><a href="extra.html">Extra</a></li>
+  <li><a href="contact.html">Contact</a></li>
+</ul>
+
+</nav>
+</header>
+
+
+
+
+<body>
+    <div id="education">
+    <div class="column-2a">
+        <h2 class="educationtext">Education</h2>
+          <table class="table-style">
+            <tr>
+              <td>UCDPA</td>
+              <td>2023 - 2024</td>
+            </tr>
+            <tr>
+              <td>DKIT</td>
+              <td>2019 - 2022</td>
+            </tr>
+            <tr>
+              <td>Bush Post Primary </td>
+              <td>2012 - 2017</td>
+            </tr>
+            <tr>
+              <td>St Vincents</td>
+              <td>2011 - 2012</td>
+            </tr>
+            <tr>
+              <td>Bellurgan N.S</td>
+              <td>2004 - 2011</td>
+            </tr>
+              
+          </table>
+        </div>
+
+        <div class="image-slideshow">
+            <div class="image fade">
+            <img src="static\images\talos.jpg" alt="Robocode">
+            <div class="text-block">
+                <h4>Robocode runner up</h4>
+                <p>Implemented a fighting robot using Java language</p>
+              </div>
+            </div>        
+            <div class="image fade">
+            <img src="static\images\ggulivrrimg.png" alt="Ggulivrr">
+            <div class="text-block">
+                <h4>Ggulivrr</h4>
+                <p>Created an ecofriendly app prototype</p>
+              </div>
+            </div>        
+            <div class="image fade">
+            <img src="static\images\dojomor.png" alt="Dojomor">
+            <div class="text-block">
+                <h4>Dojomor mentor</h4>
+                <p>Mentored a group of young people to help them learn Python </p>
+              </div>
+            </div>
+          </div>
+
+
+
+        <div class="column-2a">
+            <h2 class="educationtext">Skills</h2>
+           <table class="table-style">
+             <tr>
+               <td>Social Media</td>
+               <td>⭐⭐⭐⭐⭐</td>
+             </tr>
+             <tr>
+               <td>HTML</td>
+               <td>⭐⭐⭐⭐</td>
+             </tr>
+             <tr>
+               <td>CSS</td>
+               <td>⭐⭐⭐⭐</td>
+             </tr>
+             <tr>
+               <td>Organisation</td>
+               <td>⭐⭐⭐⭐</td>
+             </tr>
+             <tr>
+               <td>Public Speaking</td>
+               <td>⭐⭐⭐</td>
+             </tr>
+             <tr>
+               <td>Java</td>
+               <td>⭐⭐⭐</td>
+             </tr>
+           </table>
+         </div>
+
+
+        
+        </div>
+
+          <script>let index = 0;
+            displayImages();
+            function displayImages() {
+              let i;
+              const images = document.getElementsByClassName("image");
+              for (i = 0; i < images.length; i++) {
+                images[i].style.display = "none";
+              }
+              index++;
+              if (index > images.length) {
+                index = 1;
+              }
+              images[index-1].style.display = "block";
+              setTimeout(displayImages, 6000); 
+            }</script>
+
+
+</body> 
+</html>
